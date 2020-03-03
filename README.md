@@ -4,7 +4,9 @@ An automatic essay scoring system based on convolutional and recurrent neural ne
 
 ### Set Up ###
 
-* Install Keras (with Theano backend)
+* Install
+    * Tensorflow 1.15.0 (Cuda 10.0)
+    * Keras 2.3.1
 * Prepare data
 * Run train_nea.py
 
@@ -28,13 +30,7 @@ python train_nea.py -h
 The following command trains a model for prompt 1 in the ASAP dataset, using the training and development data from fold 0 and evaluates it.
 
 ```bash
-THEANO_FLAGS="device=gpu0,floatX=float32" python train_nea.py
-	-tr data/fold_0/train.tsv
-	-tu data/fold_0/dev.tsv
-	-ts data/fold_0/test.tsv
-	-p 1	# Prompt ID
-	--emb embeddings.w2v.txt
-	-o output_dir
+bash train_nea.sh
 ```
 
 ### Frequently Asked Questions ###
