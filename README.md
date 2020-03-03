@@ -5,6 +5,7 @@ An automatic essay scoring system based on convolutional and recurrent neural ne
 ### Set Up ###
 
 * Install
+    * Python 3.7
     * Tensorflow 1.15.0 (Cuda 10.0)
     * Keras 2.3.1
 * Prepare data
