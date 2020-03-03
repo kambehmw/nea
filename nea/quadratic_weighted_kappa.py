@@ -7,7 +7,7 @@ def confusion_matrix(rater_a, rater_b, min_rating=None, max_rating=None):
     """
     Returns the confusion matrix between rater's ratings
     """
-    assert(len(rater_a) == len(rater_b))
+    assert (len(rater_a) == len(rater_b))
     if min_rating is None:
         min_rating = min(rater_a + rater_b)
     if max_rating is None:
@@ -58,7 +58,7 @@ def quadratic_weighted_kappa(rater_a, rater_b, min_rating=None, max_rating=None)
     """
     rater_a = np.array(rater_a, dtype=int)
     rater_b = np.array(rater_b, dtype=int)
-    assert(len(rater_a) == len(rater_b))
+    assert (len(rater_a) == len(rater_b))
     if min_rating is None:
         min_rating = min(min(rater_a), min(rater_b))
     if max_rating is None:
@@ -106,7 +106,7 @@ def linear_weighted_kappa(rater_a, rater_b, min_rating=None, max_rating=None):
     is the minimum possible rating, and max_rating is the maximum possible
     rating
     """
-    assert(len(rater_a) == len(rater_b))
+    assert (len(rater_a) == len(rater_b))
     if min_rating is None:
         min_rating = min(rater_a + rater_b)
     if max_rating is None:
@@ -154,7 +154,7 @@ def kappa(rater_a, rater_b, min_rating=None, max_rating=None):
     is the minimum possible rating, and max_rating is the maximum possible
     rating
     """
-    assert(len(rater_a) == len(rater_b))
+    assert (len(rater_a) == len(rater_b))
     if min_rating is None:
         min_rating = min(rater_a + rater_b)
     if max_rating is None:
